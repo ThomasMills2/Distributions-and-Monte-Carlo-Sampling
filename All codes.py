@@ -1,35 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Apr 26 15:39:10 2023
-
-@author: Tom
-"""
+#Throwing 10,000 pairs of 10 sided dice, summing each pair, counting the occurence of each outcome.
 import numpy as np
 import matplotlib.pyplot as plt
-#All codes
-
-#%% Question 1b
-
-dice = np.arange(1,11)
-outcomes = np.add.outer(dice,dice)
-
-probs = np.zeros(19)
-for i in range(10):
-    for j in range(10):
-        s = outcomes[i,j]
-        probs[s-2] += 1
-        
-probs /= 100.0
-
-sums = np.arange(2,21)
-plt.bar(sums, probs, align='center', alpha=0.5)
-plt.xticks(sums)
-plt.xlabel('Sum')
-plt.ylabel('Probability')
-plt.title('Probability Distribution of Sum of Two 10-Sided Dice')
-plt.show()
-
-#%% Qustion 1c
 
 rng = np.random.default_rng(210055795)
 
@@ -525,3 +496,4 @@ fit=np.polyfit(x1,GalH,2)
 y=((fit[0]*(x1**2))+(fit[1]*x1)+fit[2])
 plt.plot(x1,y)
 print(fit)
+
