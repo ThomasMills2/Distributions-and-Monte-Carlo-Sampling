@@ -1,7 +1,3 @@
-#this notebook shows you how to read the data, and make some simple operations.
-
-import numpy as np
-
 import numpy as np
 import sys
 import os.path
